@@ -1,0 +1,69 @@
+﻿@model CultivateNowPresentation.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>CultivateNow Admin Giriş</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="~/Login-Form/css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+	<!-- login form -->
+	<section class="w3l-login">
+		<div class="overlay">
+			<div class="wrapper">
+				<div class="logo">
+					<a class="brand-logo" href="index.html">CultivateNow Admin Giriş Formu</a>
+				</div>
+				<div class="form-section">
+					<form method="post" class="signin-form">
+						<div class="form-input">
+							<input type="text" asp-for="username" placeholder="Kullanıcı Adı" required="" autofocus>
+						</div>
+						<div class="form-input">
+							<input type="password" asp-for="password" placeholder="Şifre" required="">
+						</div>
+						<label class="check-remaind">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							<p class="remember">Beni Hatırla</p>
+						</label>
+						<button type="submit" class="btn btn-primary theme-button mt-4">Giriş Yap</button>
+						<br/>
+						<br />
+						<label>Hesabınız yoksa <a href="~/Login/SignUp/">Kayıt Olun!</a></label>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id='stars'></div>
+		<div id='stars2'></div>
+		<div id='stars3'></div>
+
+		<!-- copyright -->
+		<div class="copy-right">
+        <p>© @DateTime.Now.Year CultivateNow . Tüm Hakları Saklıdır | Theme Source: W3layouts - Edit By <a href="https://burakarslan.me/">Burak Arslan</a> </p>
+		</div>
+		<!-- //copyright -->
+	</section>
+
+	<!-- /login form -->
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+    @await Component.InvokeAsync("_HeadPartial")
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            @await Component.InvokeAsync("_TopAdressPartial")
+            @await Component.InvokeAsync("_SocialMediaPartial")
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    <!-- //header -->
+    <!--Slider-->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+        <!-- Modal1 -->
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>CultivateNow</h4>
+                    <img src="~/CultivateNowHome/images/banner1.jpg" alt=" " class="img-responsive">
+                    <h5>ÇEVRE VE SÜRDÜRÜLEBİLİRLİK</h5>
+                    <p>
+                        CultivateNow olarak, tarımda verimliliği artırırken çevreye olan etkilerimizi en aza indirmek için sürekli olarak yenilikçi teknolojilere yatırım yapıyoruz. Modern tarım ekipmanlarımız, toprak işleme, sulama ve hasat süreçlerinde zaman ve enerji tasarrufu sağlıyor. Örneğin, otomatik sulama sistemlerimiz, bitkilerin ihtiyaç duyduğu su miktarını hassas bir şekilde belirleyerek su israfını önlerken, enerji verimli traktörlerimiz ve makinelerimiz, yakıt tüketimini azaltarak karbon ayak izimizi küçültüyor. Bu yenilikçi yaklaşımlar sayesinde, hem çiftlik operasyonlarımızı optimize ediyor hem de sürdürülebilir tarım uygulamalarına katkıda bulunuyoruz. CultivateNow olarak, geleceğin tarımını bugünden şekillendiriyor ve çevreye duyarlı üretim yöntemlerimizle topluma değer katıyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog">
+        <!-- Modal1 -->
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>CultivateNow</h4>
+                    <img src="~/CultivateNowHome/images/banner1.jpg" alt=" " class="img-responsive">
+                    <h5>Yeni Ürünler ve Verim</h5>
+                    <p>
+                        CultivateNow, çiftçilerin kârını artırmak ve piyasa taleplerine hızlı yanıt vermek için sürekli olarak yeni ve yüksek verimli ürünler geliştirmektedir. Ar-Ge ekibimiz, iklim koşullarına dayanıklı, hastalıklara karşı dirençli ve yüksek verim sağlayan bitki türleri üzerinde çalışmaktadır. Ayrıca, organik ve doğal ürünlere olan talebin artmasıyla birlikte, çiftçilerimize bu alanlarda yenilikçi çözümler sunarak onların gelirlerini çeşitlendirmelerine olanak tanıyoruz. Eğitim ve destek programlarımızla, çiftçilerin bu yeni ürünleri başarıyla yetiştirmelerini ve pazara sunmalarını sağlıyoruz. Böylece, çiftçilerin ekonomik sürdürülebilirliklerini artırırken, tüketicilere de sağlıklı ve kaliteli ürünler sunuyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- //Modal1 -->
+    <!--//Slider-->
+    <!--//Header-->
+    <!-- about -->
+    @await Component.InvokeAsync("_AboutPartial")
+    <!-- //about-bottom -->
+    <!--sevices-->
+    @await Component.InvokeAsync("_ServicePartial")
+    <!--//sevices-->
+    <!-- team -->
+    @await Component.InvokeAsync("_EmployeePartial")
+    <!-- //team -->
+    <!--blog -->
+    @await Component.InvokeAsync("_AnnouncementPartial")
+    
+    @await Component.InvokeAsync("_GalleryPartial") 
+    <!--footer-->
+    <div class="contact-agile" id="contact">
+        <div class="container">
+            @await Component.InvokeAsync("_AdressPartial")
+
+            @await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
+
+
+        </div>
+    </div>
+    @await Component.InvokeAsync("_MapPartial")
+
+    <div class="copy">
+        <p>© @DateTime.Now.Year CultivateNow . Tüm Hakları Saklıdır | Theme Source: W3layouts - Edit By <a href="https://burakarslan.me/">Burak Arslan</a> </p>
+    </div>
+    <!--/footer -->
+    <!-- js -->
+    @await Html.PartialAsync("/Views/Default/ScriptPartial.cshtml")
+</body>
+</html>
+
